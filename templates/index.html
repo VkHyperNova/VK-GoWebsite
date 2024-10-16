@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{.Title}}</title>
-    <link rel="stylesheet" href="/static/styles.css"> <!-- Link to your CSS file -->
-</head>
-<body>
-    <header>
-        <h1>{{.Title}}</h1>
-    </header>
-    <main>
-        <p>{{.Message}}</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Simple Go Website</p>
-    </footer>
-</body>
-</html>
+
+<!-- Include header -->
+{{ template "header.html" . }} 
+
+
+<div class="content">
+    <!-- Content placeholder -->
+    {{ block "content" . }} {{ end }} 
+</div>
+
+<!-- Include footer -->
+{{ template "footer.html" . }} 

@@ -1,0 +1,26 @@
+{
+  "name": "vk-gowebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss build static/styles.css -o static/tailwind/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VkHyperNova/VK-GoWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VkHyperNova/VK-GoWebsite/issues"
+  },
+  "homepage": "https://github.com/VkHyperNova/VK-GoWebsite#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
+  }
+}
