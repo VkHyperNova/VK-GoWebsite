@@ -1,8 +1,15 @@
 package handlers
 
-import "net/http"
+import (
+	"net/http"
+	"time"
+)
 
 func AboutHandler(w http.ResponseWriter, r *http.Request) {
-    p := &Page{Title: "About", Message: "You are on about page!"}
+    p := &Page{
+		Title:   "About Page",
+		Message: "Hello, welcome to my simple Go website!",
+		Year:    time.Now().Year(),
+	}
     renderTemplate(w, "index.html", p)
 }

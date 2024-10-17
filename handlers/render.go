@@ -5,10 +5,10 @@ import (
     "net/http"
 )
 
-// Page structure for templates
 type Page struct {
-    Title   string
-    Message string
+	Title   string
+	Message string
+	Year    int
 }
 
 var templates = template.Must(template.ParseFiles(
