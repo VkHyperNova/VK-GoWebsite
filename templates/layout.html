@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="/static/output.css" rel="stylesheet">
+</head>
+<body>
+    {{ template "header.html" . }} <!-- Include header -->
+    <h1 class="italic">ASD</h1>
+    <div class="main-content">
+        {{ block "content" . }} {{ end }} <!-- Block for page-specific content -->
+    </div>
+
+    {{ template "footer.html" . }} <!-- Include footer -->
+</body>
+</html>

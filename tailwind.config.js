@@ -4,7 +4,7 @@ module.exports = {
   content: [
     './src/**/*.{html,js}',
     './templates/**/*.html', // Adjust this to match your HTML template directory
-    './static/**/*.js' // If you have custom JS
+    // './static/**/*.js' // If you have custom JS
   ],
   theme: {
     colors: {
