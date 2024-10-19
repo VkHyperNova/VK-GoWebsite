@@ -1,19 +1,31 @@
+{{ define "layout" }}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="/static/styles.css">
     <link href="/static/output.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+
 </head>
+
 <body>
     {{ template "header.html" . }} <!-- Include header -->
-    <h1 class="italic">ASD</h1>
-    <div class="main-content">
-        {{ block "content" . }} {{ end }} <!-- Block for page-specific content -->
-    </div>
+
+    <!-- Block for page-specific content -->
+    <main>
+        <div class="bg-blue-500 text-white p-4">
+            This is a blue background with white text.
+        </div>
+        
+        {{ block "content" . }} {{ end }}
+    </main>
 
     {{ template "footer.html" . }} <!-- Include footer -->
 </body>
+
 </html>
+{{ end }}
