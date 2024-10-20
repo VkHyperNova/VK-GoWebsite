@@ -1,31 +1,25 @@
 {{ define "layout" }}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ .Title }}</title>
-    <link href="/static/output.css" rel="stylesheet">
-    <link href="/static/styles.css" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="/static/output.css" rel="stylesheet" />
+    <link href="/static/styles.css" rel="stylesheet" />
+  </head>
 
-</head>
+  <body>
+    {{ template "header.html" . }}
+    <!-- Include header -->
 
-<body>
-    {{ template "header.html" . }} <!-- Include header -->
-
-    <!-- Block for page-specific content -->
     <main>
-        <div class="bg-blue-500 text-white p-4">
-            This is a blue background with white text.
-        </div>
-        
-        {{ block "content" . }} {{ end }}
+      {{ block "content" . }} {{ end }}
+      <!-- Block for page-specific content -->
     </main>
 
-    {{ template "footer.html" . }} <!-- Include footer -->
-</body>
-
+    {{ template "footer.html" . }}
+    <!-- Include footer -->
+  </body>
 </html>
 {{ end }}
